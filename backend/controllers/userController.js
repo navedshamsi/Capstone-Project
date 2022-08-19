@@ -1,43 +1,5 @@
 const User = require("../models/User")
 const bcrypt = require("bcrypt")
-const jwt = require("jsonwebtoken")
-
-module.exports.updatePassword= async (req,res)=>{
-    const data = req.body
-   // console.log(req.headers['authorization'])  -- bearer token
-    try{    
-    const hashedpassword = await bcrypt.hash(data.upassword,4)
-    const updatedpassword = await usermodel.findOneAndUpdate({email:req.token.email},{password: hashedpassword})
-    if(updatedpassword){
-    res.status(301).send({msg:"password updated",status: true})
-    }
-    else{
-        res.status(404).send({msg:"password not updated",status: false})
-    }
-    }
-    catch(err){
-        res.send("not authorized")
-    }
-}
-
-
-module.exports.deleteUser=async (req,res)=>{
-    //const data = req.body
-    try{
-
-    const deleteuser = await User.findOneAndDelete({email:req.body.email})
-
-    if(deleteuser){
-    res.status(301).send({msg:`deleted ${req.body.email}`,status: true})
-    }
-    else{
-        res.status(404).send({msg:"not deleted",status: false})
-    }
-    }
-    catch(err){
-        res.send("deletion failed")
-    }
-}
 
 
 
@@ -74,7 +36,7 @@ module.exports.login=async (req,res)=>{
     const usercomparsion = await bcrypt.compare(data.password,user.password)
     //console.log(usercomparsion)
     if(usercomparsion){
-      
+        
         res.status(201).send({msg:"user signin succesfull",status:true})
         
     }
@@ -110,3 +72,36 @@ module.exports.get= async (req,res)=>{
         res.status(201).send({data:user,status:true})
     }
 }
+
+
+module.exports.update= async (req,res)=>{
+
+    
+    const user = await User.findOneAndUpdate({email:req.body.email},req.body)
+    if(!user){
+        res.status(404).send({msg:"user not found",status:false})
+    }
+    else{
+        
+        res.status(201).send({data:"user updated",status:true})
+    }
+}
+
+module.exports.deleteUser = async function (req, res) {
+    if( !req.body.name){
+        return res.json({ msg: "missing name in req body", status: false });
+    }
+   
+    try {
+        const user = await User.findOneAndDelete({ name: req.body.name });
+        
+        if (user) {
+            res.send("deletion of User successfull");
+        } else {
+            res.send("Invalid User name || User not found");
+        }
+    } catch {
+        res.send("error in deleting User");
+    }
+
+};

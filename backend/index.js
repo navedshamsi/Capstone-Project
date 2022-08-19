@@ -28,8 +28,10 @@ db.once("open", () => {
 
 
 app.use("/user", require("./routes/user"));
-// app.use("/admin", require("./routes/admin"));
+app.use("/admin", require("./routes/admin"));
 app.use("/products", require("./routes/products"));
+
+
 
 app.listen(8000, () => {
   console.log("Server is running on port:8000");

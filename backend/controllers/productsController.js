@@ -49,7 +49,7 @@ module.exports.deleteProduct = async function (req, res) {
             res.send("Invalid product name || product not found");
         }
     } catch {
-        res.send("error in deleting books");
+        res.send("error in deleting User");
     }
 
 };
