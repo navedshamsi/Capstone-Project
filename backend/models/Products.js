@@ -19,7 +19,11 @@ const ProductsSchema = new mongoose.Schema({
   description:{
     type:String,
     required: true,
- }
+ },
+ quantity:{
+  type:String,
+  required: true,
+}
 });
 
 const Products = mongoose.model("Products", ProductsSchema);

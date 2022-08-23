@@ -1,41 +1,39 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken")
-
+const { updateCart, addToCart, deleteFromCart, getUserCart, getAllUsersCart } = require("../controllers/cartController");
+const {verifyToken,verifyTokenAndAuthorization,
+   verifyTokenAndAdmin,} = require("../middleware/verifyToken");
 const adminController = require("../controllers/adminController");
 const productsController=require("../controllers/productsController")
 
+// admin
 router.post("/register", adminController.createAdmin);
 router.post("/login", adminController.login);
 router.post("/logout", adminController.logout);
 
-router.post("/addproducts", authorize,productsController.addProducts);
-router.get("/getAllproducts",authorize, productsController.getProducts);
-router.get("/getOneproducts",authorize, productsController.getOneProduct);
-router.put("/updateproducts",authorize, productsController.updateProducts);
-router.delete("/deleteproducts",authorize, productsController.deleteProduct);
+// products
+router.post("/addproducts", verifyToken,productsController.addProducts);
+router.get("/getAllproducts",verifyToken, productsController.getProducts);
+router.get("/getOneproducts",verifyToken, productsController.getOneProduct);
+router.put("/updateproducts",verifyToken, productsController.updateProducts);
+router.delete("/deleteproducts",verifyToken, productsController.deleteProduct);
 
-router.post("/deleteuser",authorize, adminController.deleteUser)
-router.post("/updatepassword", authorize,adminController.updatePassword )
+// cart
+router.post("/add", verifyToken, addToCart);
+router.put("/update", verifyToken, updateCart);
+router.delete("/delete", verifyToken, deleteFromCart);
+router.post("/getall", verifyToken, getUserCart);
+
+//GET ALL Users 
+// router.get("/", verifyTokenAndAdmin, getAllUsersCart);
+
+// router.post("/deleteuser",verifyToken, adminController.deleteUser)
+// router.post("/updatepassword", verifyToken,adminController.updatePassword )
 
 
 
-function authorize(req,res,next){
-    try{
-       let reqheader = req.headers['authorization']
-       const token = reqheader.replace("Bearer ",'')
-       
- 
-   
-       const verifiedtoken = jwt.verify(token,'jamesbond')
-       req.token = verifiedtoken
-       next()
-       return
-    }
-    catch(err){
-       res.send("you are not authorized")
-    }
-   }
+
 
 
 

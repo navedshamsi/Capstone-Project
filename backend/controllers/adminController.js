@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken")
 
 module.exports.updatePassword= async (req,res)=>{
     const data = req.body
-   
     try{    
     const hashedpassword = await bcrypt.hash(data.password,4)
     
@@ -78,7 +77,7 @@ module.exports.login = async (req,res)=>{
     const admincomparsion = await bcrypt.compare(data.password,admin.password)
     
     if(admincomparsion){
-        const generatedtoken = jwt.sign({email:data.email},"jamesbond",{expiresIn:'1h'})
+        const generatedtoken = jwt.sign({email:data.email},"secret",{expiresIn:'1h'})
         res.status(201).send({msg:"admin signin succesfull",status:true
         ,token:generatedtoken})
         }

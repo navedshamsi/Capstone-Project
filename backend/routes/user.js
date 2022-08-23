@@ -1,21 +1,17 @@
-const express = require("express")
-// const csvRouter =require("./csv-upload");
 
-const userController=require("../controllers/userController")
+const {
+    verifyTokenAndAuthorization,
+    verifyTokenAndAdmin,
+  } = require("../controllers/verifyToken");
+  const userController = require("../controllers/userController");
+  
+  const router = require("express").Router();
+  
 
-const router = express.Router()
+  router.post("/register", userController.register);
+  router.post("/login", userController.login);
+  router.post("/logout", userController.logout);
+  router.get("/getall", userController.getAll);
+  router.post("/delete", userController.delete);
 
-
-
-router.post("/register",userController.register)
-router.post("/login",userController.login)
-router.post("/logout",userController.logout)
-router.post("/get",userController.get)
-router.put("/updateUser",userController.update)
-router.delete("/deleteUser",userController.deleteUser)
-
-// router.use("/upload-csv", csvRouter);
-
-
-
-module.exports  = router
+  module.exports = router;

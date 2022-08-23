@@ -12,11 +12,12 @@ module.exports.addProducts= async function (req, res) {
 
     let items= req.body
     try{
+        
         await Products.create(items);
         return res.json({ msg: "Added", status: true });
     }
     catch(e){
-        return res.json({ msg:"body not according to required parameters", status: false });
+        return res.json({ msg:"body not according to required parameters", status: false ,error:e});
     }
     
 };
@@ -51,7 +52,6 @@ module.exports.deleteProduct = async function (req, res) {
     } catch {
         res.send("error in deleting User");
     }
-
 };
 
 
