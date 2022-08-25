@@ -1,0 +1,8 @@
+.adminCard p{
+    text-align: left;
+    /* overflow:; */
+}
+.buttonToAdd1{
+    height: 4vh;
+    width: 6vw;
+}

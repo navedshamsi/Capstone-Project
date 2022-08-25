@@ -1,0 +1,144 @@
+/* #04ADBF #052939 #031923 */
+
+.swiper {
+    width: 98vw;
+    margin: 3vh auto 4vh auto;
+    height: 84vh;
+    box-shadow: 0 0 12px 1px #04ADBF;
+    box-shadow: 0 0 4px 0 black;
+    /* border-radius: 22px; */
+    /* border: 2px solid #04ADBF; */
+    z-index: -1;
+    border: 0;
+    border-radius:12px ;
+    /* border-top: 0.1vw solid #04ADBF; */
+    box-shadow: 0 0 8px 0.2px #04ADBF;
+    border: 0.15vw solid #04ADBF;
+    
+}
+
+.iimg3 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+    background-image: url("../../images/bed.jpg"); 
+    /* box-shadow: inset 0 0 0 1000px #04acbf1c; */
+    box-shadow: inset 0 0 0 1000px #0529392d;
+}
+
+.iimg1 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+    background-image: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&dl=spacejoy-RqO6kwm4tZY-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb");
+    box-shadow: inset 0 0 0 1000px #0529392d;
+}
+
+.iimg2 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&dl=phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb");
+    box-shadow: inset 0 0 0 1000px #0529392d;
+}
+
+.categories {
+    width: 100vw;
+    margin: auto;
+    margin-top: 2vh;
+    height: 6vh;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.425);
+    background-color: #017380;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    border-top: 0;
+    font-weight: bolder;
+    box-shadow: 0 0 8px 1px black;
+    /* border-radius: 6px; */
+    position: fixed;
+    top: -2vh;
+    text-transform: uppercase;
+ 
+}
+
+.cars {
+    width: 97vw;
+    height: 55vh;
+    margin: auto;
+    margin-top: 10vh;
+    background: #031923;
+    padding: 2vh 0 4vh 0;
+    box-shadow: 0 0 12px 1px #04ADBF;
+    border-radius: 12px;
+}
+
+.cardContainer {
+    width: 99%;
+    height: 91%;
+    padding-right: 1%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    overflow: scroll;
+    /* border:1px solid black; */
+    
+    overflow: hidden;
+}
+
+.card {
+    width: 18%;
+    height: 90%;
+    /* margin-bottom: 2%; */
+    margin-left: 1%;
+    /* margin-right:2%; */
+    /* background-color:  #0091a1; */
+    background-color: transparent;
+    color: #04ADBF;
+    /* box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.349); */
+    padding: 0.5%;
+    border-radius: 12px;
+    /* box-shadow: 0 0 5px 1px #04ADBF; */
+}
+
+.cars h1 {
+    padding-left: 2%;
+    margin-bottom: 1%;
+    color: #04ADBF;
+    
+}
+
+.cardImg {
+    width: 90%;
+    height: 70%;
+    margin: 0 auto 15% auto;
+    background: blue;
+    /* background-image: url("https://api.lorem.space/image/fashion?w=640&h=480&r=249"); */
+    /* background-size: cover;
+background-position: center; */
+    /* box-shadow: 0 0 8px 1px rgba(32, 32, 32, 0.829); */
+    border-radius: 8px;
+    box-shadow: 0 0 4px 3px #14FFFF;
+    border: 1px solid black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.sp {
+    text-align: center;
+    margin: 4% 0 1% 0;
+    width: 100%;
+    text-shadow: 0 0 2px 1px rgba(32, 32, 32, 0.829);
+    /* background: yellow; */
+}

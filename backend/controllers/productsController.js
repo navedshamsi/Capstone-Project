@@ -1,15 +1,18 @@
 const Products = require("../models/Products");
+const { csv2json } = require("csvjson-csv2json");
 
 module.exports.addProducts= async function (req, res) {
+   
+    console.log(req.body)
     if(!req.body.category || !req.body.image || !req.body.name|| !req.body.price|| !req.body.description){
         return res.json({ msg: "missing required fields in body", status: false });
     }
-
+  
    const checkItem = await Products.findOne({ name: req.body.name });
    if(checkItem){
     return res.json({ msg: "product already exists", status: false });
    }
-
+    
     let items= req.body
     try{
         
@@ -84,3 +87,17 @@ module.exports.getOneProduct= async function (req, res) {
      
  };
  
+ module.exports.c= async function(req, res) {
+ 
+    const jsonObject = csv2json(req.files.csvupload.data.toString("utf-8"));
+    try{
+        let result=await Products.insertMany(jsonObject)
+        res.json(result)
+    }
+    catch(e){
+        res.json("error")
+    }
+    
+    
+
+}

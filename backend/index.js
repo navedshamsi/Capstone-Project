@@ -2,12 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
+var fileUpload = require('express-fileupload');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
+app.use(fileUpload());
 
 mongoose.connect("mongodb://localhost:27017/capstone");
 
@@ -30,6 +30,11 @@ app.use("/products", require("./routes/products"));
 app.use("/cart", require("./routes/cartRoute"));
 app.use("/orders", require("./routes/orderRoute"));
 app.use("/wishlist", require("./routes/wishListRoute"));
+app.use("/discount", require("./routes/discountCouponRoute"));
+
+
+
+
 
 
 app.listen(8000, () => {

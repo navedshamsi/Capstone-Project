@@ -1,0 +1,29 @@
+.adminCard{
+  width: 17vw;
+  height: 38vh;
+  margin: 3vw;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 12px 1px #04ADBF;
+  border-radius: 12px;
+  background: #031923;
+  color:#04ADBF;
+  padding: 1vw;
+}
+.li{
+    width: 100%;
+  height: 6vh;
+  text-align: center;
+  /* background-color: yellow; */
+  overflow-x: hidden;
+}
+.adminCardHolder{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+}
+.recharts-surface{
+  /* background: red!important; */
+  color: yellow !important;
+}

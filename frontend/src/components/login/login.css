@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?v=3.2.1');
+    src: url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('vwbedded-opentype'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .loginsignup{
+    width:100%;
+    height:7%;
+    background:rgba(0, 0, 0, 0.384);
+    border-top-right-radius:12px;
+    display: flex;
+  }
+.login{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color:#04ADBF;
+  background: #031923;
+  padding-top: 2%;
+  
+}
+.loginActive{
+  width: 50%;
+  height: 100%;
+  background: #04ADBF;
+  text-align: center;
+  color:black;
+  border-bottom-right-radius:5px;
+  padding-top: 2%;
+  /* border-top: 3px solid rgb(173, 173, 173); */
+  
+}
+.signup{
+  width: 50%;
+  height: 100%;
+  background: #04ADBF;
+  border-top-right-radius:12px;
+  text-align: center;
+  background: #031923;
+ color:#04ADBF;
+ padding-top: 2%;
+}
+.signupActive{
+  width: 50%;
+  height: 100%;
+  background: #04ADBF;
+  border-top-right-radius:9px;
+  text-align: center;
+  border-bottom-left-radius:5px;
+  padding-top: 2%;
+}
+.loginPage{
+    width: 100vw;
+    height: 100vh;
+ background: #052939;
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
+     display: flex;
+
+  overflow: hidden;
+
+}
+
+.loginContainer{
+  width:30vw;
+  height: 90vh;
+  margin-top:5vh;
+  
+  background:  rgba(0, 0, 0, 0.384);
+  border-radius: 12px;
+
+  
+   border-top: 3px solid #04ADBF;
+   border-right: 3px solid #04ADBF;
+   border-bottom:3px solid #04ADBF ;
+   border-right:3px solid #04ADBF;
+   border-radius: 0 12px 12px 0 ;
+  
+}
+.loginimg{
+
+   border-radius: 50%;
+   width: 25%;
+   height: 17%;
+   margin: auto;
+   margin-top: 15%;
+   margin-bottom: 8%;
+   background-image: url("../../images/login.png");
+   /* box-shadow:  0 0 0 1000px #04acbf18; */
+   background-size:cover;
+   background-position: center;
+   
+}
+.loginContainer button{
+    width: 20%;
+    height: 8%;
+    margin: 10% 0 2% 42%;
+    border-radius: 12px;
+    border:none;
+    outline: 0;
+    box-shadow: 0 0 3px 1px black;
+    background: transparent;
+    /* box-shadow: 0 0 1px 2px #04ADBF; */
+    border: 2px solid #04ADBF;
+    color:#04ADBF;
+}
+.name,.pass{
+    width: 80%;
+    height:6% ;
+    margin: 2% 30% 2% 10%;
+    color:#04ADBF;
+    background: transparent;
+    outline: 0;
+    border:0;
+    border-bottom:2px solid #04ADBF;
+    /* box-shadow: 0 0 3px 1px grey; */
+    /* border:2px solid black; */
+    /* text-align: center; */
+     font-weight: bolder;
+     padding-left: 2%;
+}
+.loginimgCover{
+    width:60vw;
+    height: 90vh;
+  margin-top:5vh;
+  
+  margin-left: 5vw;
+  border-bottom-left-radius: 22px;
+  border-top-left-radius: 22px;
+  /* box-shadow: -4px 0 10px 2px grey; */
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../images/shopping2.jpg");
+  background-color: #676EB8;
+  border-top: 3px solid #04ADBF;
+  border-left: 3px solid #04ADBF;
+  border-bottom:3px solid #04ADBF ;
+  border-right:3px solid #04ADBF;
+  border-radius: 12px 0  0   12px   ;
+  /* border:2px solid black; */
+  
+  
+}
+
+.loginimgCover p{
+     font-size: 4.5vw;
+     word-break: break-all;
+     white-space: normal;
+     /* padding: 2vw; */
+     text-align: center;
+ margin-bottom:2vh;
+ margin-top: 2vh;
+
+color:black;
+font-family: Aclonica;
+
+
+
+
+color: #fcedd8;
+
+ font-family: 'Niconne', cursive;
+font-weight: 700;
+text-shadow: 2px 2px 0px #eb452b, 
+            4px 4px 0px #efa032, 
+            6px 6px 0px #052939, 
+            /* 15px 15px 0px #46b59b,  */
+            30px 30px 0px #676EB8, 
+            35px 35px 0px #676EB8, 
+            40px 40px 0px #676EB8, 
+            45px 45px 0px #676EB8; 
+}
+form{
+    width: 100%;
+    height: 100%;
+
+}

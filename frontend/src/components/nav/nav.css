@@ -1,0 +1,30 @@
+.nav{
+    width: 98vw;
+    height: 8vh;
+    margin: auto;
+    display: flex;
+    border: 0.15vw solid #04ADBF;
+    background: #031923;
+    /* box-shadow: 0 1px 1px 0 black; */
+    box-shadow: 0 0 8px 0.2px #04ADBF;
+    font-weight: bolder;
+    z-index: 100;
+    border-radius:8px ;
+}
+.nav h1{
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0.5% 0 0 2%;
+    color:#04ADBF;
+}
+.navFlex{
+  width: 40%;
+  height: 100%;
+  font-size: x-large;
+  /* background-color: yellow; */
+  display: flex;
+  color:#04ADBF;
+  align-items: center;
+  justify-content:space-around;
+}

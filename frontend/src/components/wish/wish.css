@@ -1,0 +1,68 @@
+.card1{
+    width: 94%;
+    height: 100%;
+    display: flex;
+}
+.cardImg1{
+    height: 100%;
+    width: 40%;
+}
+.quantityInput{
+    background: transparent;
+     border:none;
+     outline: none;
+     border: 2px solid #04ADBF;
+     width: 20%;
+    height: 45%;
+    color:#04ADBF;
+    
+    border-radius: 12px;
+    text-align: center;
+}
+.buttonToAdd{
+    width: 20%;
+    height: 35%;
+    margin: 2.5% 0 0 0;
+    border-radius: 12px;
+    border:none;
+    outline: 0;
+    box-shadow: 0 0 3px 1px black;
+    background: transparent;
+    /* box-shadow: 0 0 1px 2px #04ADBF; */
+    border: 2px solid red;
+    color:red;
+}
+/* p{
+    background: b;
+} */
+.cars1{
+    width: 97vw;
+    height: 15vh;
+    margin-top: 6vh;
+    
+}
+.sp{
+    /* background-color: black; */
+    margin-top: 3%;
+}
+.spName{
+    width:50%;
+    margin-left: 1%;
+}
+.spDescription{
+    width:90%;
+    
+    margin-right: 2%;
+}
+.spPrice{
+    width:10%;
+    /* margin-left: 2%; */
+    margin-right: 2%;
+}
+.spQuantity{
+    
+    width:30%;
+    margin-top: 2.5%;
+    margin-right: 2%;
+    
+}

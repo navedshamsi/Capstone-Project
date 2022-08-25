@@ -1,11 +1,21 @@
 const Order = require("../models/orderModel");
-
+const Product=require("../models/Products")
+const emailAlert = require("./auto-email.js");
 
 module.exports.addOrder= async function (req, res) {
     if(!req.body.category || !req.body.image || !req.body.name|| !req.body.price|| !req.body.description){
         return res.json({ msg: "missing required fields in body", status: false });
     }
 
+    let lessStockProducts = [];
+    let request={}
+    request.body=req.body
+    console.log(request) 
+    request.body.quantity=request.body.quantity-1
+    let data=Product.findOneAndUpdate({ name: req.body.name },
+        request.body);
+    lessStockProducts.push([req.body.name, request.body.quantity]);
+    emailAlert.emailAlert (lessStockProducts);
    const checkItem = await Order.findOne({ name: req.body.name });
    if(checkItem){
     return res.json({ msg: "product already exists", status: false });
